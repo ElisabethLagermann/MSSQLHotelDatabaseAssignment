@@ -31,7 +31,7 @@ namespace HotelConsoleApp
                 .Build();
 
 
-            String _connectionString = config["ElisabethsSecretString"];
+            string _connectionString = config["ElisabethsSecretString"];
 
 
             //Create connection
@@ -67,7 +67,7 @@ namespace HotelConsoleApp
             SqlCommand command = new SqlCommand(sql, _connection);
 
            
-            command.Parameters.AddWithValue("@name", customer.Name);
+            command.Parameters.AddWithValue("@Name", customer.Name);
             command.Parameters.AddWithValue("@Phone", customer.Phone);
 
             int rowsAffected = command.ExecuteNonQuery();
